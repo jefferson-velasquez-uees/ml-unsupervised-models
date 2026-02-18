@@ -400,24 +400,6 @@ De este resultado se puede interpretar que la visualización t-SNE muestra "isla
 
 ---
 
-### 5.8 Resumen de hallazgos técnicos
-
-| Aspecto | Resultado |
-|:---|:---|
-| **Dataset** | 350 registros (348 tras limpieza), 11 columnas, 2 nulos eliminados |
-| **Variables de entrada** | Age, Total Spend, Items Purchased, Average Rating, Days Since Last Purchase, Membership |
-| **Normalización** | StandardScaler (media=0, std=1) |
-| **K óptimo (Codo + Negocio)** | K = 3 clusters |
-| **Silhouette Score K-Means** | 0.544 (excelente) |
-| **DBSCAN** | 4 clusters, eps=1.25, min_samples=5 |
-| **Silhouette Score DBSCAN** | 0.595 (superior a K-Means) |
-| **Varianza explicada (PCA 2D)** | ~91.9% con 2 componentes |
-| **Validación (PCA + t-SNE)** | Clusters confirmados como comunidades naturales |
-
-**Fuente del dataset:** [Kaggle - E-commerce Customer Behavior Dataset](https://www.kaggle.com/datasets/uom190346a/e-commerce-customer-behavior-dataset)
-
----
-
 ## 6. Respuestas a las preguntas de reflexión
 
 ### 1. ¿Qué tipo de perfiles de usuarios/consumidores se pueden identificar?
