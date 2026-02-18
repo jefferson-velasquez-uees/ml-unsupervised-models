@@ -40,12 +40,146 @@ En base a esta información, se ha optado por distribuir los grupos de la siguie
 |:--------| :--- |:----------|:-----------------------------------------------------------------------------------| :--- |
 | **3**   | **Los Desertores Silenciosos** | **Alerta Roja** | - 34 Silver jóvenes (~27 años)<br/> - 100% insatisfechos<br/> - 53 días inactivos. | Intervención inmediata. |
 
+## 3. Perfilamiento Detallado de Arquetipos
+
+### Cluster 0: "Las Fantasmas Bronze" (En riesgo de irse)
+
+> Son clientas que compran poco, no quedan del todo conformes y, poco a poco, dejan de aparecer. Si no hacemos nada, probablemente las perdamos.
+
+#### ¿Cómo son?
+
+- **Edad promedio:** ~39 años (el grupo de mayor edad).
+- **Gasto total promedio:** ~$474 (el más bajo).
+- **Ítems comprados:** ~9 (compras puntuales y de bajo valor).
+- **Rating promedio:** 3.33/5 (el más bajo).
+- **Días desde la última compra:** ~32 días.
+- **Membresía:** 100% Bronze.
+- **Género:** 100% femenino.
+- **Satisfacción:** 51% insatisfechas, 49% neutral. Ninguna se declara satisfecha.
+
+#### ¿Qué está pasando acá?
+
+Son clientas que no terminaron de encontrar algo que realmente las enganche. Compran lo mínimo, no califican muy bien y no muestran señales claras de entusiasmo. No necesariamente tuvieron una experiencia terrible, pero tampoco algo que las motive a volver.
+
+Representan el 33% de la base, lo que significa que un tercio de nuestros clientes está en una zona delicada.
+
+#### ¿Qué podríamos hacer?
+
+- Activar campañas de reenganche antes de que pasen más de 30 días sin comprar.
+- Mejorar la experiencia post-compra (seguimiento, atención, devoluciones más simples).
+- Ofrecer una prueba temporal del plan Silver con beneficios claros (envío gratis, acceso anticipado, etc.).
+
 ---
 
+### Cluster 1: "Los Champions Gold" (Nuestros mejores clientes)
 
+> Son los clientes ideales: compran seguido, están contentos y hablan bien de la plataforma.
 
+#### ¿Cómo son?
+
+- **Edad promedio:** ~30 años.
+- **Gasto total promedio:** ~$1,311 (casi 3 veces más que Bronze).
+- **Ítems comprados:** ~18.
+- **Rating promedio:** 4.68/5 (el más alto).
+- **Días desde la última compra:** ~18 días.
+- **Membresía:** 100% Gold.
+- **Género:** 50% hombres, 50% mujeres.
+- **Satisfacción:** 100% satisfechos.
+
+#### ¿Qué vemos en este grupo?
+
+Son clientes jóvenes, activos y comprometidos. Compran con frecuencia, exploran distintos productos y valoran muy bien la experiencia. No solo generan más ingresos, sino que también son los más propensos a recomendar la plataforma.
+
+Representan el 34% de la base y aportan una parte desproporcionada del revenue.
+
+#### ¿Qué deberíamos hacer con ellos?
+
+- Impulsar programas de referidos ("Invita y gana").
+- Darles beneficios exclusivos: acceso anticipado, productos premium, atención prioritaria.
+- Monitorear su comportamiento y actuar rápido si alguno empieza a comprar menos.
 
 ---
+
+### Cluster 2: "Los Silver Invisibles" (El punto de equilibrio)
+
+> Son clientes que están en el medio. No están mal, pero tampoco están realmente comprometidos. Dependiendo de la experiencia que tengan, pueden subir a Gold o bajar a Bronze.
+
+#### ¿Cómo son?
+
+- **Edad promedio:** ~32 años.
+- **Gasto total promedio:** ~$748.
+- **Ítems comprados:** ~12.
+- **Rating promedio:** 4.05/5.
+- **Días desde la última compra:** ~30 días.
+- **Membresía:** 100% Silver.
+- **Género:** 99% masculino.
+- **Satisfacción:** 50% insatisfechos, 44% neutral, solo 7% satisfechos.
+
+#### ¿Qué nos dice esto?
+
+Aunque el rating promedio es aceptable, la mayoría no se declara satisfecha. Hay una desconexión entre la evaluación numérica y la experiencia real.
+
+Este grupo representa el 33% de la base, por lo que es estratégico: con el enfoque correcto, muchos podrían convertirse en clientes Gold.
+
+#### ¿Qué podemos hacer?
+
+- Ofrecer pruebas de Gold por tiempo limitado para mostrar el valor diferencial.
+- Mejorar la personalización, considerando que es un grupo mayoritariamente masculino.
+- Profundizar en encuestas cualitativas para entender qué está fallando.
+
+---
+
+### DBSCAN Cluster 3: "Los Desertores Silenciosos" (Alerta roja)
+
+> Es un grupo pequeño pero preocupante: clientes que ya parecen haber decidido irse, aunque todavía no lo hicieron oficialmente.
+
+#### ¿Cómo son?
+
+- **Edad promedio:** ~27 años (los más jóvenes).
+- **Gasto total promedio:** ~$704.
+- **Ítems comprados:** ~13.
+- **Rating promedio:** 4.02/5.
+- **Días desde la última compra:** ~53 días.
+- **Membresía:** 100% Silver.
+- **Satisfacción:** 100% insatisfechos.
+
+#### ¿Por qué es preocupante?
+
+No son clientes de bajo valor. Gastaban un monto razonable y compraban con cierta frecuencia. El problema es que están completamente insatisfechos y llevan más de 50 días sin comprar.
+
+Representan un 10% de la base (34 clientes) y muestran señales claras de abandono inminente.
+
+#### ¿Qué haría acá?
+
+- Contacto directo y personalizado para entender qué pasó.
+- Ofrecer un incentivo fuerte (descuento especial o upgrade temporal a Gold).
+- Analizar si existe un problema puntual (producto, envíos, soporte) que esté afectando a este perfil.
+
+---
+
+## 4. Validación del Modelo (explicado en simple)
+
+Para asegurarnos de que estos grupos no son una división arbitraria, utilizamos dos técnicas que nos ayudan a visualizar mejor la estructura de los datos.
+
+### 1. Análisis de Componentes Principales (PCA)
+
+Esta técnica permite resumir muchas variables en dos grandes ejes que explican casi todo lo que ocurre en el dataset.
+
+- Los dos primeros componentes explican el 91.9% de la variación total.
+- El primer eje está relacionado principalmente con el nivel de actividad y compromiso (gasto, membresía, cantidad de compras, rating).
+- El segundo eje está vinculado al tiempo desde la última compra.
+
+En términos simples: casi todo se puede entender observando qué tan activo es un cliente y qué tan reciente fue su última compra.
+
+### 2. t-SNE
+
+Esta técnica nos permite visualizar cómo se agrupan naturalmente los clientes.
+
+- Gold y Bronze aparecen claramente separados.
+- Silver queda en una zona intermedia, coherente con su perfil de transición.
+
+Esto refuerza que los segmentos no son forzados, sino que reflejan diferencias reales en el comportamiento de los clientes.
+
 
 ## 5. Explicación técnica de la solución
 
