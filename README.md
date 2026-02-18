@@ -1,6 +1,6 @@
 # Segmentación Estratégica de Clientes E-commerce
 **Fecha:** 16 de Febrero, 2026
-**Autores:** Jefferson Velasquez, Frank Macias, Jorge Delgado
+**Autores:** Jefferson Velasquez, Frank Macias, Jorge Murillo
 **Asunto:** Identificación de Perfiles de Comportamiento de Compra mediante Clustering (Aprendizaje No Supervisado)
 
 ---
